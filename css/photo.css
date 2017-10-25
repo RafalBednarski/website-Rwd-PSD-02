@@ -1,0 +1,68 @@
+.button {
+  height: 3.438rem;
+  width: 12.125rem;
+  background: #16a085;
+  color: white;
+  border: none;
+  border-radius: 0.188rem; }
+
+.jumbotron {
+  height: 50.5rem;
+  width: 100%;
+  background: url("../img/build/livello-1.jpg");
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-position: center;
+  margin: 0; }
+
+.navbar {
+  font-family: 'Dosis', sans-serif;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap; }
+  .navbar li {
+    color: #ffffff;
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 15rem;
+    text-transform: uppercase;
+    letter-spacing: 0.15rem;
+    list-style-type: none;
+    margin-right: 5rem;
+    margin-left: 5rem; }
+
+.call-to-action {
+  text-align: center;
+  color: white; }
+  .call-to-action h1 {
+    text-align: center; }
+  .call-to-action p {
+    text-align: center; }
+
+.first {
+  height: 31rem;
+  width: 100%;
+  background: #f5f6f7; }
+  .first .represent h4 {
+    padding-top: 10rem; }
+  .first .phone1 img {
+    padding-top: 5rem; }
+
+.second {
+  background-color: #fff;
+  height: 31rem;
+  width: 100%; }
+  .second h4 {
+    padding-top: 10rem; }
+  .second img {
+    padding-top: 5rem; }
+
+.third {
+  background-color: #f5f6f7;
+  height: 30rem; }
+
+/*# sourceMappingURL=photo.css.map */

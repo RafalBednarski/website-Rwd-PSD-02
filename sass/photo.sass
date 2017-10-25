@@ -1,0 +1,78 @@
+@mixin responsive-image($background-repeat, $-webkit-background-size, $-moz-background-size, $-o-background-size, $background-size, $background-position)	
+	background-repeat: $background-repeat
+	-webkit-background-size: $-webkit-background-size
+	-moz-background-size: $-moz-background-size
+	-o-background-size: $-o-background-size
+	background-size: $background-size
+	background-position: $background-position
+
+
+@mixin section($height, $width, $background)
+	height: $height
+	width: $width
+	background: $background
+
+@mixin button($color, $border, $border-radius)
+	color: $color
+	border: $border
+	border-radius: $border-radius	
+
+.button
+	@include section(3.438rem, 12.125rem, #16a085)
+	@include button(white, none, 0.188rem)
+
+.jumbotron
+	@include section(50.500rem, 100%, url('../img/build/livello-1.jpg'))
+	@include responsive-image(no-repeat, cover, cover, cover, cover, center)
+	margin: 0
+
+.navbar
+	font-family: 'Dosis', sans-serif
+	display: flex
+	flex-direction: row
+	justify-content: center
+	flex-wrap: wrap
+	li
+		color: #ffffff
+		font-size: 1rem
+		font-weight: 700
+		line-height: 15rem
+		text-transform: uppercase
+		letter-spacing: 0.15rem
+		list-style-type: none
+		margin-right: 5rem
+		margin-left: 5rem
+
+.call-to-action
+	text-align: center
+	color: white
+	h1
+		text-align: center
+	p
+		text-align: center
+
+
+.first
+	@include section(31rem, 100%, #f5f6f7)
+	.represent
+		h4
+			padding-top: 10rem
+	.phone1
+		img
+			padding-top: 5rem		
+
+.second
+	background-color: #fff
+	height: 31rem
+	width: 100%
+	h4
+		padding-top: 10rem
+	img
+		padding-top: 5rem
+
+.third
+	background-color: #f5f6f7
+	height: 30rem
+
+
+
