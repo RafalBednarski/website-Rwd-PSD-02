@@ -65,4 +65,16 @@
   background-color: #f5f6f7;
   height: 30rem; }
 
+.four {
+  height: 50.5rem;
+  width: 100%;
+  background: url("../img/build/background.png");
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-position: center;
+  margin: 0; }
+
 /*# sourceMappingURL=photo.css.map */
