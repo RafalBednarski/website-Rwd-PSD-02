@@ -6,6 +6,14 @@
   border: none;
   border-radius: 0.188rem; }
 
+.button-small {
+  height: 4rem;
+  width: 4rem;
+  background: #16a085;
+  color: white;
+  border: none;
+  border-radius: 0.188rem; }
+
 .jumbotron {
   height: 50.5rem;
   width: 100%;
@@ -53,17 +61,18 @@
     padding-top: 5rem; }
 
 .second {
-  background-color: #fff;
   height: 31rem;
-  width: 100%; }
+  width: 100%;
+  background: #fff; }
   .second h4 {
     padding-top: 10rem; }
   .second img {
     padding-top: 5rem; }
 
 .third {
-  background-color: #f5f6f7;
-  height: 30rem; }
+  height: 30rem;
+  width: 100%;
+  background: #f5f6f7; }
 
 .four {
   height: 50.5rem;
@@ -75,6 +84,34 @@
   -o-background-size: cover;
   background-size: cover;
   background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-wrap: no-wrap;
   margin: 0; }
+  .four form {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: no-wrap; }
+    .four form .input-custom {
+      height: 4rem;
+      width: 17.5rem;
+      background: #fff;
+      color: #424242;
+      border: none;
+      border-radius: 0.188rem; }
+
+.five {
+  height: 25rem;
+  width: 100%;
+  background: #f5f6f7; }
+  .five .button-dow {
+    height: 3.8rem;
+    width: 15rem;
+    background: #16a085;
+    color: #fff;
+    border: none;
+    border-radius: 0.188rem; }
 
 /*# sourceMappingURL=photo.css.map */

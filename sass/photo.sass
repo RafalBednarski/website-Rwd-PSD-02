@@ -6,32 +6,38 @@
 	background-size: $background-size
 	background-position: $background-position
 
+@mixin flex($display, $flex-direction, $justify-content, $flex-wrap)
+	display: $display
+	flex-direction: $flex-direction
+	justify-content: $justify-content
+	flex-wrap: $flex-wrap
 
-@mixin section($height, $width, $background)
+@mixin hei-wid-back($height, $width, $background)
 	height: $height
 	width: $width
 	background: $background
 
-@mixin button($color, $border, $border-radius)
+@mixin col-bor-rad($color, $border, $border-radius)
 	color: $color
 	border: $border
 	border-radius: $border-radius	
 
 .button
-	@include section(3.438rem, 12.125rem, #16a085)
-	@include button(white, none, 0.188rem)
+	@include hei-wid-back(3.438rem, 12.125rem, #16a085)
+	@include col-bor-rad(white, none, 0.188rem)
+
+.button-small
+	@include hei-wid-back(4rem, 4rem, #16a085)
+	@include col-bor-rad(white, none, 0.188rem)
 
 .jumbotron
-	@include section(50.500rem, 100%, url('../img/build/livello-1.jpg'))
+	@include hei-wid-back(50.500rem, 100%, url('../img/build/livello-1.jpg'))
 	@include responsive-image(no-repeat, cover, cover, cover, cover, center)
 	margin: 0
 
 .navbar
 	font-family: 'Dosis', sans-serif
-	display: flex
-	flex-direction: row
-	justify-content: center
-	flex-wrap: wrap
+	@include flex(flex, row, center, wrap)
 	li
 		color: #ffffff
 		font-size: 1rem
@@ -53,7 +59,7 @@
 
 
 .first
-	@include section(31rem, 100%, #f5f6f7)
+	@include hei-wid-back(31rem, 100%, #f5f6f7)
 	.represent
 		h4
 			padding-top: 10rem
@@ -62,22 +68,36 @@
 			padding-top: 5rem		
 
 .second
-	background-color: #fff
-	height: 31rem
-	width: 100%
+	@include hei-wid-back(31rem, 100%, #fff)
 	h4
 		padding-top: 10rem
 	img
 		padding-top: 5rem
 
 .third
-	background-color: #f5f6f7
-	height: 30rem
+	@include hei-wid-back(30rem, 100%, #f5f6f7)
 
 .four
-	@include section(50.500rem, 100%, url('../img/build/background.png'))
+	@include hei-wid-back(50.500rem, 100%, url('../img/build/background.png'))
 	@include responsive-image(no-repeat, cover, cover, cover, cover, center)
-	margin: 0	
+	@include flex(flex, column, center, no-wrap)
+	margin: 0
+	form
+		@include flex(flex, row, center, no-wrap)
+		.input-custom
+			@include hei-wid-back(4rem, 17.500rem, #fff)
+			@include col-bor-rad(#424242, none, 0.188rem)
+
+.five
+	@include hei-wid-back(25rem, 100%, #f5f6f7)
+	.button-dow
+		@include hei-wid-back(3.800rem, 15rem, #16a085)
+		@include col-bor-rad(#fff, none, 0.188rem)
+
+
+
+
+
 
 
 
