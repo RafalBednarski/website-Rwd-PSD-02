@@ -26,10 +26,6 @@
 	@include hei-wid-back(3.438rem, 12.125rem, #16a085)
 	@include col-bor-rad(white, none, 0.188rem)
 
-.button-small
-	@include hei-wid-back(4rem, 4rem, #16a085)
-	@include col-bor-rad(white, none, 0.188rem)
-
 .jumbotron
 	@include hei-wid-back(50.500rem, 100%, url('../img/build/livello-1.jpg'))
 	@include responsive-image(no-repeat, cover, cover, cover, cover, center)
@@ -86,13 +82,22 @@
 		@include flex(flex, row, center, no-wrap)
 		.input-custom
 			@include hei-wid-back(4rem, 17.500rem, #fff)
-			@include col-bor-rad(#424242, none, 0.188rem)
+			@include col-bor-rad(#424242, none, 0.188rem 0 0 0.188rem)
+		.button-small
+			@include hei-wid-back(4rem, 4rem, #16a085)
+			@include col-bor-rad(white, none, 0 0.188rem 0.188rem 0)
 
 .five
 	@include hei-wid-back(25rem, 100%, #f5f6f7)
-	.button-dow
-		@include hei-wid-back(3.800rem, 15rem, #16a085)
-		@include col-bor-rad(#fff, none, 0.188rem)
+	form
+		@include flex(flex, row, center, no-wrap)
+		.button-dow
+			@include hei-wid-back(4rem, 15rem, #1abc9c)
+			@include col-bor-rad(#fff, none, 0.188rem 0 0 0.188rem)
+		.button-store
+			@include hei-wid-back(4rem, 4rem, #16a085)
+			@include col-bor-rad(white, none, 0 0.188rem 0.188rem 0)
+			
 
 
 

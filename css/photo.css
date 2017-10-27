@@ -6,14 +6,6 @@
   border: none;
   border-radius: 0.188rem; }
 
-.button-small {
-  height: 4rem;
-  width: 4rem;
-  background: #16a085;
-  color: white;
-  border: none;
-  border-radius: 0.188rem; }
-
 .jumbotron {
   height: 50.5rem;
   width: 100%;
@@ -100,18 +92,37 @@
       background: #fff;
       color: #424242;
       border: none;
-      border-radius: 0.188rem; }
+      border-radius: 0.188rem 0 0 0.188rem; }
+    .four form .button-small {
+      height: 4rem;
+      width: 4rem;
+      background: #16a085;
+      color: white;
+      border: none;
+      border-radius: 0 0.188rem 0.188rem 0; }
 
 .five {
   height: 25rem;
   width: 100%;
   background: #f5f6f7; }
-  .five .button-dow {
-    height: 3.8rem;
-    width: 15rem;
-    background: #16a085;
-    color: #fff;
-    border: none;
-    border-radius: 0.188rem; }
+  .five form {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: no-wrap; }
+    .five form .button-dow {
+      height: 4rem;
+      width: 15rem;
+      background: #1abc9c;
+      color: #fff;
+      border: none;
+      border-radius: 0.188rem 0 0 0.188rem; }
+    .five form .button-store {
+      height: 4rem;
+      width: 4rem;
+      background: #16a085;
+      color: white;
+      border: none;
+      border-radius: 0 0.188rem 0.188rem 0; }
 
 /*# sourceMappingURL=photo.css.map */
