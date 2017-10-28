@@ -31,6 +31,10 @@
 	@include responsive-image(no-repeat, cover, cover, cover, cover, center)
 	margin: 0
 
+.social-icon
+	@include flex(flex, row, center, no-wrap)
+	margin-top: 14.75rem
+
 .navbar
 	font-family: 'Dosis', sans-serif
 	@include flex(flex, row, center, wrap)
@@ -89,15 +93,19 @@
 
 .five
 	@include hei-wid-back(25rem, 100%, #f5f6f7)
-	form
-		@include flex(flex, row, center, no-wrap)
-		.button-dow
-			@include hei-wid-back(4rem, 15rem, #1abc9c)
-			@include col-bor-rad(#fff, none, 0.188rem 0 0 0.188rem)
-		.button-store
-			@include hei-wid-back(4rem, 4rem, #16a085)
-			@include col-bor-rad(white, none, 0 0.188rem 0.188rem 0)
-			
+	h4
+		padding-top: 5.700rem
+	.store-section
+		margin-top: 5.800rem	
+		.store
+			@include flex(flex, row, center, no-wrap)
+			.button-dow
+				@include hei-wid-back(4rem, 15rem, #1abc9c)
+				@include col-bor-rad(#fff, none, 0.188rem 0 0 0.188rem)
+			.button-store
+				@include hei-wid-back(4rem, 4rem, #16a085)
+				@include col-bor-rad(white, none, 0 0.188rem 0.188rem 0)
+				
 
 
 
