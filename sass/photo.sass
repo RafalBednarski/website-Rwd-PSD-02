@@ -27,28 +27,31 @@
 	@include col-bor-rad(white, none, 0.188rem)
 
 .jumbotron
-	@include hei-wid-back(50.500rem, 100%, url('../img/build/livello-1.jpg'))
+	@include hei-wid-back(56rem, 100%, url('../img/build/livello-1.jpg'))
 	@include responsive-image(no-repeat, cover, cover, cover, cover, center)
 	margin: 0
-
-.social-icon
-	@include flex(flex, row, center, no-wrap)
-	margin-top: 14.75rem
-
-.navbar
-	font-family: 'Dosis', sans-serif
-	@include flex(flex, row, center, wrap)
-	li
-		color: #ffffff
-		font-size: 1rem
-		font-weight: 700
-		line-height: 15rem
-		text-transform: uppercase
-		letter-spacing: 0.15rem
-		list-style-type: none
-		margin-right: 5rem
-		margin-left: 5rem
-
+	position: relative
+	.navbar
+		font-family: 'Dosis', sans-serif
+		@include flex(flex, row, center, wrap)
+		li
+			font-size: 1rem
+			font-weight: 700
+			line-height: 15rem
+			text-transform: uppercase
+			letter-spacing: 0.15rem
+			list-style-type: none
+			margin: 2rem 5rem 5rem 5rem
+		.navbar-nav
+			margin: auto				
+	.social-icon
+		position: absolute
+		bottom: 1rem
+		left: 47%
+		margin: auto
+		img
+			margin: 0.2rem		
+	
 .call-to-action
 	text-align: center
 	color: white
@@ -57,28 +60,29 @@
 	p
 		text-align: center
 
-
 .first
-	@include hei-wid-back(31rem, 100%, #f5f6f7)
 	.represent
 		h4
 			padding-top: 10rem
 	.phone1
 		img
-			padding-top: 5rem		
+			padding-top: 5rem
+			height: 100%
+			width: 100%		
 
 .second
-	@include hei-wid-back(31rem, 100%, #fff)
 	h4
 		padding-top: 10rem
 	img
 		padding-top: 5rem
+		height: 100%
 
 .third
-	@include hei-wid-back(30rem, 100%, #f5f6f7)
+	.row
+		padding-top: 5rem
 
 .four
-	@include hei-wid-back(50.500rem, 100%, url('../img/build/background.png'))
+	background: url('../img/build/background.png')
 	@include responsive-image(no-repeat, cover, cover, cover, cover, center)
 	@include flex(flex, column, center, no-wrap)
 	margin: 0
@@ -92,7 +96,6 @@
 			@include col-bor-rad(white, none, 0 0.188rem 0.188rem 0)
 
 .five
-	@include hei-wid-back(25rem, 100%, #f5f6f7)
 	h4
 		padding-top: 5.700rem
 	.store-section
