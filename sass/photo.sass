@@ -1,3 +1,6 @@
+$main-color: #16a085
+$background: #f5f6f7
+
 @mixin responsive-image($background-repeat, $-webkit-background-size, $-moz-background-size, $-o-background-size, $background-size, $background-position)	
 	background-repeat: $background-repeat
 	-webkit-background-size: $-webkit-background-size
@@ -20,37 +23,60 @@
 @mixin col-bor-rad($color, $border, $border-radius)
 	color: $color
 	border: $border
-	border-radius: $border-radius	
+	border-radius: $border-radius
+
+body
+	font-family: 'NTR', sans-serif
 
 .button
 	@include hei-wid-back(3.438rem, 12.125rem, #16a085)
 	@include col-bor-rad(white, none, 0.188rem)
+	&:hover
+        box-shadow: 0 1px 10px $main-color
+        background-color: #17b196
+        transform: scale(1.02)
 
 .jumbotron
 	@include hei-wid-back(56rem, 100%, url('../img/build/livello-1.jpg'))
 	@include responsive-image(no-repeat, cover, cover, cover, cover, center)
 	margin: 0
 	position: relative
-	.navbar
-		font-family: 'Dosis', sans-serif
-		@include flex(flex, row, center, wrap)
-		li
-			font-size: 1rem
-			font-weight: 700
-			line-height: 15rem
-			text-transform: uppercase
-			letter-spacing: 0.15rem
-			list-style-type: none
-			margin: 2rem 5rem 5rem 5rem
-		.navbar-nav
-			margin: auto				
-	.social-icon
-		position: absolute
-		bottom: 1rem
-		left: 47%
-		margin: auto
-		img
-			margin: 0.2rem		
+	color: #fff
+	h1
+		font-weight: bold
+		letter-spacing: 2px;
+
+.navbar
+	@include flex(flex, row, center, wrap)
+
+.navbar-nav
+	margin: auto
+	color: #fff	
+	li
+		font-size: 1rem
+		font-weight: 700
+		line-height: 15rem
+		text-transform: uppercase
+		letter-spacing: 0.15rem
+		list-style-type: none
+		margin: 2rem 5rem 5rem 5rem
+		&:hover
+            -webkit-filter: drop-shadow(5px 5px 15px $main-color)
+            filter: drop-shadow(5px 5px 15px $main-color)
+            -webkit-filter: drop-shadow(5px 5px 15px $main-color)
+            filter: drop-shadow(5px 5px 15px $main-color)
+	a
+		color: #fff      
+
+.center
+	@include flex(flex, column, center, wrap)
+	align-items: center
+
+.social-icon
+	position: absolute
+	bottom: 1rem
+	img
+		margin: 0.2rem		
 	
 .call-to-action
 	text-align: center
@@ -60,54 +86,87 @@
 	p
 		text-align: center
 
-.first
-	.represent
-		h4
-			padding-top: 10rem
-	.phone1
-		img
-			padding-top: 5rem
-			height: 100%
-			width: 100%		
+.represent
+	background: $background
+	h4
+		padding-top: 10rem
+	img
+		padding-top: 5rem
+		height: 100%
+		width: 100%
 
-.second
+.carousel-01
 	h4
 		padding-top: 10rem
 	img
 		padding-top: 5rem
 		height: 100%
 
-.third
-	.row
-		padding-top: 5rem
+.our-comunity
+	background-color: $background
+	padding-top: 10rem
+	padding-bottom: 10rem
+	.col-md-3
+		@extend .center
+		img
+			padding-bottom: 1rem
+			&:hover
+                -webkit-filter: drop-shadow(5px 5px 15px $main-color)
+                filter: drop-shadow(5px 5px 15px $main-color)
+                -webkit-filter: drop-shadow(5px 5px 15px $main-color)
+                filter: drop-shadow(5px 5px 15px $main-color)
+		p
+			text-align: center
+	.carousel-item
+		margin: 1rem
+		img		
+			&:hover
+			    background-color: #17b196
+			    transform: scale(1.02)
+			    border-radius: 30px
 
-.four
-	background: url('../img/build/background.png')
+.take-a-photo
+	@include hei-wid-back(100vh, 100%, url('../img/build/background.png'))
 	@include responsive-image(no-repeat, cover, cover, cover, cover, center)
 	@include flex(flex, column, center, no-wrap)
 	margin: 0
 	form
 		@include flex(flex, row, center, no-wrap)
-		.input-custom
-			@include hei-wid-back(4rem, 17.500rem, #fff)
-			@include col-bor-rad(#424242, none, 0.188rem 0 0 0.188rem)
-		.button-small
-			@include hei-wid-back(4rem, 4rem, #16a085)
-			@include col-bor-rad(white, none, 0 0.188rem 0.188rem 0)
 
-.five
+.input-custom
+	@include hei-wid-back(4rem, 17.500rem, #fff)
+	@include col-bor-rad(#424242, none, 0.188rem 0 0 0.188rem)
+
+.button-small
+	@include hei-wid-back(4rem, 4rem, #16a085)
+	@include col-bor-rad(white, none, 0 0.188rem 0.188rem 0)
+	&:hover
+        box-shadow: 0 1px 10px $main-color
+        background-color: #17b196
+        transform: scale(1.03)
+
+.download-it
+	background-color: $background
 	h4
 		padding-top: 5.700rem
-	.store-section
-		margin-top: 5.800rem	
-		.store
-			@include flex(flex, row, center, no-wrap)
-			.button-dow
-				@include hei-wid-back(4rem, 15rem, #1abc9c)
-				@include col-bor-rad(#fff, none, 0.188rem 0 0 0.188rem)
-			.button-store
-				@include hei-wid-back(4rem, 4rem, #16a085)
-				@include col-bor-rad(white, none, 0 0.188rem 0.188rem 0)
+
+.store-section
+	margin-top: 5.800rem
+
+.store
+	@include flex(flex, row, center, no-wrap)
+
+.button-dow
+	@include hei-wid-back(4rem, 15rem, #1abc9c)
+	@include col-bor-rad(#fff, none, 0.188rem 0 0 0.188rem)
+	&:hover
+        box-shadow: 0 1px 10px $main-color
+        background-color: #17b196
+        transform: scale(1.02)
+
+.button-store
+	@include hei-wid-back(4rem, 4rem, #16a085)
+	@include col-bor-rad(white, none, 0 0.188rem 0.188rem 0)
 				
 
 
