@@ -100,7 +100,15 @@ body
 		padding-top: 10rem
 	img
 		padding-top: 5rem
-		height: 100%
+	.carousel-control-prev
+		position: absolute
+		left: 2rem
+		top: 25rem	
+
+	.carousel-control-next
+		position: absolute
+		left: 0rem
+		top: 25rem
 
 .our-comunity
 	background-color: $background
@@ -121,9 +129,19 @@ body
 		margin: 1rem
 		img		
 			&:hover
-			    background-color: #17b196
-			    transform: scale(1.02)
-			    border-radius: 30px
+            -webkit-filter: drop-shadow(5px 5px 15px $main-color)
+            filter: drop-shadow(5px 5px 15px $main-color)
+            -webkit-filter: drop-shadow(5px 5px 15px $main-color)
+            filter: drop-shadow(5px 5px 15px $main-color)
+	.carousel-control-prev
+		position: absolute
+		left: 45rem
+		top: -18rem
+
+	.carousel-control-next
+		position: absolute
+		left: 43rem
+		top: -18rem		
 
 .take-a-photo
 	@include hei-wid-back(100vh, 100%, url('../img/build/background.png'))

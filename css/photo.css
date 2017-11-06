@@ -89,8 +89,17 @@ body {
   padding-top: 10rem; }
 
 .carousel-01 img {
-  padding-top: 5rem;
-  height: 100%; }
+  padding-top: 5rem; }
+
+.carousel-01 .carousel-control-prev {
+  position: absolute;
+  left: 2rem;
+  top: 25rem; }
+
+.carousel-01 .carousel-control-next {
+  position: absolute;
+  left: 0rem;
+  top: 25rem; }
 
 .our-comunity {
   background-color: #f5f6f7;
@@ -108,9 +117,18 @@ body {
   .our-comunity .carousel-item {
     margin: 1rem; }
     .our-comunity .carousel-item img:hover {
-      background-color: #17b196;
-      transform: scale(1.02);
-      border-radius: 30px; }
+      -webkit-filter: drop-shadow(5px 5px 15px #16a085);
+      filter: drop-shadow(5px 5px 15px #16a085);
+      -webkit-filter: drop-shadow(5px 5px 15px #16a085);
+      filter: drop-shadow(5px 5px 15px #16a085); }
+  .our-comunity .carousel-control-prev {
+    position: absolute;
+    left: 45rem;
+    top: -18rem; }
+  .our-comunity .carousel-control-next {
+    position: absolute;
+    left: 43rem;
+    top: -18rem; }
 
 .take-a-photo {
   height: 100vh;
