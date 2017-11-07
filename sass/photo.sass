@@ -1,5 +1,6 @@
 $main-color: #16a085
 $background: #f5f6f7
+$white: #fff
 
 $tablet-portrait: (max-width: 767px)
 
@@ -36,6 +37,7 @@ body
 .button
 	@include hei-wid-back(3.438rem, 12.125rem, #16a085)
 	@include col-bor-rad(white, none, 0.188rem)
+	margin: 0.5rem
 	&:hover
         box-shadow: 0 1px 10px $main-color
         background-color: #17b196
@@ -46,7 +48,7 @@ body
 	@include responsive-image(no-repeat, cover, cover, cover, cover, center)
 	margin: 0
 	position: relative
-	color: #fff
+	color: $white
 	h1
 		font-weight: bold
 		letter-spacing: 2px;
@@ -56,22 +58,21 @@ body
 
 .navbar-nav
 	margin: auto
-	color: #fff	
+	color: $white
 	li
 		font-size: 1rem
 		font-weight: 700
-		line-height: 15rem
 		text-transform: uppercase
 		letter-spacing: 0.15rem
 		list-style-type: none
 		margin: 2rem 5rem 5rem 5rem
 		&:hover
-            -webkit-filter: drop-shadow(5px 5px 15px $main-color)
-            filter: drop-shadow(5px 5px 15px $main-color)
-            -webkit-filter: drop-shadow(5px 5px 15px $main-color)
-            filter: drop-shadow(5px 5px 15px $main-color)
+	        -webkit-filter: drop-shadow(5px 5px 15px $main-color)
+	        filter: drop-shadow(5px 5px 15px $main-color)
+	        -webkit-filter: drop-shadow(5px 5px 15px $main-color)
+	        filter: drop-shadow(5px 5px 15px $main-color)
 	a
-		color: #fff      
+		color: $white      
 
 .center
 	@include flex(flex, column, center, wrap)
@@ -85,7 +86,7 @@ body
 	
 .call-to-action
 	text-align: center
-	color: white
+	color: $white
 	h1
 		text-align: center
 	p
@@ -113,8 +114,6 @@ body
 		position: absolute
 		left: 0rem
 		top: 25rem
-	button
-	    margin: 0.1rem
 
 .our-comunity
 	background-color: $background
@@ -195,10 +194,28 @@ body
         transform: scale(1.02)
 
 .button-store
-	@include hei-wid-back(4rem, 4rem, #16a085)
+	@include hei-wid-back(4rem, 4rem, $main-color)
 	@include col-bor-rad(white, none, 0 0.188rem 0.188rem 0)
+
+@media screen and (max-width: 980px)
+	.navbar-nav
+		margin-bottom: 5rem
+		li
+			margin-bottom: 10px
+			img
+				display: none
 				
 @media screen and (max-width: 768px)
+	.navbar-nav
+		margin-bottom: 5rem
+		li
+			margin-bottom: 10px
+			img
+				display: none
+
+	.your-live
+		margin-top: 1rem					
+
 	.represent
 		h4
 			padding-top: 5rem
