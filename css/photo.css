@@ -14,7 +14,7 @@ body {
     background-color: #17b196;
     transform: 1.02; }
 
-.jumbotron {
+.myJumbotron {
   height: 56rem;
   width: 100%;
   background: url("../img/build/livello-1.jpg");
@@ -27,31 +27,31 @@ body {
   margin: 0;
   position: relative;
   color: #fff; }
-  .jumbotron h1 {
+  .myJumbotron h1 {
     font-weight: bold;
     letter-spacing: 2px; }
 
-.navbar {
+.myNavbar {
   display: flex;
   flex-direction: row;
   justify-content: center;
   flex-wrap: wrap;
   align-items: center; }
 
-.navbar-nav {
+.myNavbar-nav {
   margin: auto;
   color: #fff; }
-  .navbar-nav li {
+  .myNavbar-nav li {
     font-size: 1rem;
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.15rem;
     list-style-type: none;
     margin: 2rem 5rem 5rem 5rem; }
-    .navbar-nav li:hover {
+    .myNavbar-nav li:hover {
       -webkit-filter: drop-shadow(5px 5px 15px #16a085);
       filter: drop-shadow(5px 5px 15px #16a085); }
-  .navbar-nav a {
+  .myNavbar-nav a {
     color: #fff; }
 
 .center, .our-comunity .col-md-3 {
@@ -88,7 +88,7 @@ body {
   padding-top: 10rem; }
 
 .carousel-01 img {
-  padding: 10rem 15rem 0 10rem; }
+  padding: 10rem 5rem 0 5rem; }
 
 .carousel-control-prev {
   left: 2rem;
@@ -221,6 +221,9 @@ body {
   .credits h6 {
     padding-top: 2rem;
     font-weight: bold; }
+    .credits h6:hover {
+      -webkit-filter: drop-shadow(5px 5px 15px #16a085);
+      filter: drop-shadow(5px 5px 15px #16a085); }
   .credits .flex-right {
     display: flex;
     flex-direction: row;
@@ -228,43 +231,50 @@ body {
     flex-wrap: wrap;
     align-items: center; }
     .credits .flex-right img {
-      padding-top: 2rem;
-      vertical-align: initial; }
+      padding: 2rem; }
       .credits .flex-right img:hover {
         -webkit-filter: drop-shadow(5px 5px 15px #16a085);
         filter: drop-shadow(5px 5px 15px #16a085); }
 
-@media screen and (max-width: 980px) {
-  .navbar-nav {
+@media screen and (max-width: 1000px) {
+  .myNavbar-nav {
     margin-bottom: 5rem; }
-    .navbar-nav li {
+    .myNavbar-nav li {
       margin-bottom: 10px; }
-      .navbar-nav li img {
-        display: none; } }
+      .myNavbar-nav li img {
+        display: none; }
+  .carousel-01 img {
+    padding: 10rem 0 0 1rem; }
+  .carousel-01 .carousel-control-prev, .carousel-01 .carousel-control-next {
+    display: none; }
+  #carousel {
+    width: 400px; } }
 
 @media screen and (max-width: 768px) {
-  .navbar-nav {
+  .myNavbar-nav {
     margin-bottom: 5rem; }
-    .navbar-nav li {
+    .myNavbar-nav li {
       margin-bottom: 10px; }
-      .navbar-nav li img {
+      .myNavbar-nav li img {
         display: none; }
   .your-live {
     margin-top: 1rem; }
   .represent h4 {
     padding-top: 5rem; }
+  .our-comunity {
+    padding-top: 5rem;
+    padding-bottom: 5rem; }
+    .our-comunity #carousel {
+      width: 400px; }
+  .download-it button {
+    margin-bottom: 1rem; } }
+
+@media screen and (max-width: 500px) {
   .carousel-01 h4 {
     padding-top: 5rem; }
   .carousel-01 img {
     padding: 5rem 0 0 0; }
-  .our-comunity {
-    padding-top: 5rem;
-    padding-bottom: 5rem; }
-    .our-comunity .carousel {
-      width: 400px; }
-  .carousel-01 .carousel-control-prev, .carousel-01 .carousel-control-next {
-    display: none; }
-  .download-it button {
-    margin-bottom: 1rem; } }
+  .credits h6, .credits p {
+    text-align: center; } }
 
 /*# sourceMappingURL=photo.css.map */

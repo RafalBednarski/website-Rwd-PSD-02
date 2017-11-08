@@ -47,7 +47,7 @@ body
 	&:hover
         @include shadow(0 1px 10px $main-color, #17b196, 1.02)
 
-.jumbotron
+.myJumbotron
 	@include hei-wid-back(56rem, 100%, url('../img/build/livello-1.jpg'))
 	@include responsive-image(no-repeat, cover, cover, cover, cover, center)
 	margin: 0
@@ -57,10 +57,10 @@ body
 		font-weight: bold
 		letter-spacing: 2px;
 
-.navbar
+.myNavbar
 	@include flex(flex, row, center, wrap, center)
 
-.navbar-nav
+.myNavbar-nav
 	margin: auto
 	color: $white
 	li
@@ -106,7 +106,7 @@ body
 	h4
 		padding-top: 10rem
 	img
-		padding: 10rem 15rem 0 10rem//???????dlaczego musze nadać padding??
+		padding: 10rem 5rem 0 5rem	
 
 .carousel-control-prev
 		left: 2rem
@@ -199,11 +199,13 @@ body
 	h6
 		padding-top: 2rem
 		font-weight: bold
+		&:hover
+		    -webkit-filter: drop-shadow(5px 5px 15px $main-color)
+		    filter: drop-shadow(5px 5px 15px $main-color)
 	.flex-right
 		@include flex(flex, row, flex-end, wrap, center)
 		img
-			padding-top: 2rem
-			vertical-align: initial
+			padding: 2rem
 			&:hover
 		    -webkit-filter: drop-shadow(5px 5px 15px $main-color)
 		    filter: drop-shadow(5px 5px 15px $main-color)
@@ -211,16 +213,24 @@ body
 
 ////////@media////////@media////////@media////////@media////////@media
 
-@media screen and (max-width: 980px)
-	.navbar-nav
+@media screen and (max-width: 1000px)
+	.myNavbar-nav
 		margin-bottom: 5rem
 		li
 			margin-bottom: 10px
 			img
 				display: none
+	.carousel-01
+		img
+			padding: 10rem 0 0 1rem
+		.carousel-control-prev, .carousel-control-next
+			display: none			
+
+	#carousel
+		width: 400px		
 				
 @media screen and (max-width: 768px)
-	.navbar-nav
+	.myNavbar-nav
 		margin-bottom: 5rem
 		li
 			margin-bottom: 10px
@@ -234,24 +244,23 @@ body
 		h4
 			padding-top: 5rem
 
+	.our-comunity
+		padding-top: 5rem
+		padding-bottom: 5rem
+		#carousel
+			width: 400px						
+
+	.download-it
+		button
+			margin-bottom: 1rem
+
+@media screen and (max-width: 500px)
 	.carousel-01
 		h4
 			padding-top: 5rem
 		img
 			padding: 5rem 0 0 0	
 
-	.our-comunity
-		padding-top: 5rem
-		padding-bottom: 5rem
-		.carousel
-			width: 400px	
-
-	.carousel-01
-		.carousel-control-prev, .carousel-control-next
-			display: none
-
-	.download-it
-		button
-			margin-bottom: 1rem
-				
-
+	.credits
+		h6, p
+			text-align: center	
