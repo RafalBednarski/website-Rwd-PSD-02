@@ -15,11 +15,12 @@ $tablet-portrait: (max-width: 767px)
 	background-size: $background-size
 	background-position: $background-position
 
-@mixin flex($display, $flex-direction, $justify-content, $flex-wrap)
+@mixin flex($display, $flex-direction, $justify-content, $flex-wrap, $align-items)
 	display: $display
 	flex-direction: $flex-direction
 	justify-content: $justify-content
 	flex-wrap: $flex-wrap
+	align-items: $align-items
 
 @mixin hei-wid-back($height, $width, $background)
 	height: $height
@@ -31,6 +32,11 @@ $tablet-portrait: (max-width: 767px)
 	border: $border
 	border-radius: $border-radius
 
+@mixin shadow($box-shadow, $background-color, $transform)
+	box-shadow: $box-shadow
+	background-color: $background-color
+	transform: $transform
+
 body
 	font-family: 'NTR', sans-serif
 
@@ -39,9 +45,7 @@ body
 	@include col-bor-rad(white, none, 0.188rem)
 	margin: 0.5rem
 	&:hover
-        box-shadow: 0 1px 10px $main-color
-        background-color: #17b196
-        transform: scale(1.02)
+        @include shadow(0 1px 10px $main-color, #17b196, 1.02)
 
 .jumbotron
 	@include hei-wid-back(56rem, 100%, url('../img/build/livello-1.jpg'))
@@ -54,7 +58,7 @@ body
 		letter-spacing: 2px;
 
 .navbar
-	@include flex(flex, row, center, wrap)
+	@include flex(flex, row, center, wrap, center)
 
 .navbar-nav
 	margin: auto
@@ -69,14 +73,11 @@ body
 		&:hover
 	        -webkit-filter: drop-shadow(5px 5px 15px $main-color)
 	        filter: drop-shadow(5px 5px 15px $main-color)
-	        -webkit-filter: drop-shadow(5px 5px 15px $main-color)
-	        filter: drop-shadow(5px 5px 15px $main-color)
 	a
 		color: $white      
 
 .center
-	@include flex(flex, column, center, wrap)
-	align-items: center
+	@include flex(flex, column, center, wrap, center)
 
 .social-icon
 	position: absolute
@@ -105,12 +106,13 @@ body
 	h4
 		padding-top: 10rem
 	img
-		padding-top: 5rem
-	.carousel-control-prev
+		padding: 10rem 15rem 0 10rem//???????dlaczego musze nadać padding??
+
+.carousel-control-prev
 		left: 2rem
 		top: 25rem
 
-	.carousel-control-next
+.carousel-control-next
 		position: absolute
 		left: 0rem
 		top: 25rem
@@ -124,8 +126,6 @@ body
 		img
 			padding-bottom: 1rem
 			&:hover
-		    -webkit-filter: drop-shadow(5px 5px 15px $main-color)
-		    filter: drop-shadow(5px 5px 15px $main-color)
 		    -webkit-filter: drop-shadow(5px 5px 15px $main-color)
 		    filter: drop-shadow(5px 5px 15px $main-color)
 		p
@@ -151,28 +151,24 @@ body
 				&:hover
 	            -webkit-filter: drop-shadow(5px 5px 15px $main-color)
 	            filter: drop-shadow(5px 5px 15px $main-color)
-	            -webkit-filter: drop-shadow(5px 5px 15px $main-color)
-	            filter: drop-shadow(5px 5px 15px $main-color)	
 
 .take-a-photo
 	@include hei-wid-back(100vh, 100%, url('../img/build/background.png'))
 	@include responsive-image(no-repeat, cover, cover, cover, cover, center)
-	@include flex(flex, column, center, no-wrap)
+	@include flex(flex, row, center, no-wrap, center)
 	margin: 0
 	form
-		@include flex(flex, row, center, no-wrap)
+		@include flex(flex, row, center, no-wrap, center)
 
 .input-custom
-	@include hei-wid-back(4rem, 17.500rem, #fff)
+	@include hei-wid-back(4rem, 50vw, #fff)
 	@include col-bor-rad(#424242, none, 0.188rem 0 0 0.188rem)
 
 .button-small
-	@include hei-wid-back(4rem, 4rem, #16a085)
+	@include hei-wid-back(4rem, 10vw, #16a085)
 	@include col-bor-rad(white, none, 0 0.188rem 0.188rem 0)
 	&:hover
-        box-shadow: 0 1px 10px $main-color
-        background-color: #17b196
-        transform: scale(1.03)
+        @include shadow(0 1px 10px $main-color, #17b196, 1.02)
 
 .download-it
 	background-color: $background
@@ -183,19 +179,37 @@ body
 	margin-top: 5.800rem
 
 .store
-	@include flex(flex, row, center, no-wrap)
+	@include flex(flex, row, center, no-wrap, center)
 
 .button-dow
 	@include hei-wid-back(4rem, 15rem, #1abc9c)
 	@include col-bor-rad(#fff, none, 0.188rem 0 0 0.188rem)
+	margin-bottom: 8rem
 	&:hover
-        box-shadow: 0 1px 10px $main-color
-        background-color: #17b196
-        transform: scale(1.02)
+        @include shadow(0 1px 10px $main-color, #17b196, 1.02)
 
 .button-store
 	@include hei-wid-back(4rem, 4rem, $main-color)
 	@include col-bor-rad(white, none, 0 0.188rem 0.188rem 0)
+	margin-bottom: 8rem
+
+.credits
+	@include hei-wid-back(8rem, 100%, $white)
+	font-weight: bold
+	h6
+		padding-top: 2rem
+		font-weight: bold
+	.flex-right
+		@include flex(flex, row, flex-end, wrap, center)
+		img
+			padding-top: 2rem
+			vertical-align: initial
+			&:hover
+		    -webkit-filter: drop-shadow(5px 5px 15px $main-color)
+		    filter: drop-shadow(5px 5px 15px $main-color)
+
+
+////////@media////////@media////////@media////////@media////////@media
 
 @media screen and (max-width: 980px)
 	.navbar-nav
@@ -222,7 +236,9 @@ body
 
 	.carousel-01
 		h4
-			padding-top: 5rem	
+			padding-top: 5rem
+		img
+			padding: 5rem 0 0 0	
 
 	.our-comunity
 		padding-top: 5rem

@@ -12,7 +12,7 @@ body {
   .button:hover {
     box-shadow: 0 1px 10px #16a085;
     background-color: #17b196;
-    transform: scale(1.02); }
+    transform: 1.02; }
 
 .jumbotron {
   height: 56rem;
@@ -35,7 +35,8 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  flex-wrap: wrap; }
+  flex-wrap: wrap;
+  align-items: center; }
 
 .navbar-nav {
   margin: auto;
@@ -48,8 +49,6 @@ body {
     list-style-type: none;
     margin: 2rem 5rem 5rem 5rem; }
     .navbar-nav li:hover {
-      -webkit-filter: drop-shadow(5px 5px 15px #16a085);
-      filter: drop-shadow(5px 5px 15px #16a085);
       -webkit-filter: drop-shadow(5px 5px 15px #16a085);
       filter: drop-shadow(5px 5px 15px #16a085); }
   .navbar-nav a {
@@ -89,13 +88,13 @@ body {
   padding-top: 10rem; }
 
 .carousel-01 img {
-  padding-top: 5rem; }
+  padding: 10rem 15rem 0 10rem; }
 
-.carousel-01 .carousel-control-prev {
+.carousel-control-prev {
   left: 2rem;
   top: 25rem; }
 
-.carousel-01 .carousel-control-next {
+.carousel-control-next {
   position: absolute;
   left: 0rem;
   top: 25rem; }
@@ -107,8 +106,6 @@ body {
   .our-comunity .col-md-3 img {
     padding-bottom: 1rem; }
     .our-comunity .col-md-3 img:hover {
-      -webkit-filter: drop-shadow(5px 5px 15px #16a085);
-      filter: drop-shadow(5px 5px 15px #16a085);
       -webkit-filter: drop-shadow(5px 5px 15px #16a085);
       filter: drop-shadow(5px 5px 15px #16a085); }
   .our-comunity .col-md-3 p {
@@ -134,8 +131,6 @@ body {
         border-radius: 0.188rem; }
         #carousel ul li img:hover {
           -webkit-filter: drop-shadow(5px 5px 15px #16a085);
-          filter: drop-shadow(5px 5px 15px #16a085);
-          -webkit-filter: drop-shadow(5px 5px 15px #16a085);
           filter: drop-shadow(5px 5px 15px #16a085); }
 
 .take-a-photo {
@@ -149,19 +144,21 @@ body {
   background-size: cover;
   background-position: center;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: center;
   flex-wrap: no-wrap;
+  align-items: center;
   margin: 0; }
   .take-a-photo form {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    flex-wrap: no-wrap; }
+    flex-wrap: no-wrap;
+    align-items: center; }
 
 .input-custom {
   height: 4rem;
-  width: 17.5rem;
+  width: 50vw;
   background: #fff;
   color: #424242;
   border: none;
@@ -169,7 +166,7 @@ body {
 
 .button-small {
   height: 4rem;
-  width: 4rem;
+  width: 10vw;
   background: #16a085;
   color: white;
   border: none;
@@ -177,7 +174,7 @@ body {
   .button-small:hover {
     box-shadow: 0 1px 10px #16a085;
     background-color: #17b196;
-    transform: scale(1.03); }
+    transform: 1.02; }
 
 .download-it {
   background-color: #f5f6f7; }
@@ -191,7 +188,8 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  flex-wrap: no-wrap; }
+  flex-wrap: no-wrap;
+  align-items: center; }
 
 .button-dow {
   height: 4rem;
@@ -199,11 +197,12 @@ body {
   background: #1abc9c;
   color: #fff;
   border: none;
-  border-radius: 0.188rem 0 0 0.188rem; }
+  border-radius: 0.188rem 0 0 0.188rem;
+  margin-bottom: 8rem; }
   .button-dow:hover {
     box-shadow: 0 1px 10px #16a085;
     background-color: #17b196;
-    transform: scale(1.02); }
+    transform: 1.02; }
 
 .button-store {
   height: 4rem;
@@ -211,7 +210,29 @@ body {
   background: #16a085;
   color: white;
   border: none;
-  border-radius: 0 0.188rem 0.188rem 0; }
+  border-radius: 0 0.188rem 0.188rem 0;
+  margin-bottom: 8rem; }
+
+.credits {
+  height: 8rem;
+  width: 100%;
+  background: #fff;
+  font-weight: bold; }
+  .credits h6 {
+    padding-top: 2rem;
+    font-weight: bold; }
+  .credits .flex-right {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    align-items: center; }
+    .credits .flex-right img {
+      padding-top: 2rem;
+      vertical-align: initial; }
+      .credits .flex-right img:hover {
+        -webkit-filter: drop-shadow(5px 5px 15px #16a085);
+        filter: drop-shadow(5px 5px 15px #16a085); }
 
 @media screen and (max-width: 980px) {
   .navbar-nav {
@@ -234,6 +255,8 @@ body {
     padding-top: 5rem; }
   .carousel-01 h4 {
     padding-top: 5rem; }
+  .carousel-01 img {
+    padding: 5rem 0 0 0; }
   .our-comunity {
     padding-top: 5rem;
     padding-bottom: 5rem; }
