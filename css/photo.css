@@ -274,6 +274,19 @@ body {
     padding-top: 5rem; }
   .carousel-01 img {
     padding: 5rem 0 0 0; }
+  .our-comunity #carousel {
+    height: 100px;
+    width: 200px; }
+    .our-comunity #carousel ul li {
+      height: 100px;
+      width: 100px; }
+      .our-comunity #carousel ul li img {
+        height: 100px;
+        width: 100px;
+        border-radius: 50px; }
+        .our-comunity #carousel ul li img:hover {
+          -webkit-filter: drop-shadow(0px 0px 0px #16a085);
+          filter: drop-shadow(0px 0px 0px #16a085); }
   .credits h6, .credits p {
     text-align: center; } }
 
